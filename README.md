@@ -4,8 +4,7 @@ This program simulates the operating system's ready queue using a queue data str
 ## How It Is Done
 The operating system (OS) manages the processes (i.e. running programs) using a queue called the ready queue. Processes that are ready to execute are inserted at the tail of the queue to wait for the availability of the CPU. When the CPU becomes available, the process that is stored at the head of the queue is selected for execution. Each node of the queue stores the unique id of each process (i.e. pid) and a reference to the next node. In addition to the ready queue, a process table is used to maintain state information about each process.
 
-In this program, we simulate the behaviour of a multitasking OS by implementing a
-ready queue in Java. Each node will store an integer key that will represent the pid of a process. 
+In this program, we simulate the behaviour of a multitasking OS by implementing a ready queue in Java. Each node will store an integer key that will represent the pid of a process. 
 
 Initially, the queue will be filled with 100 keys chosen at random using the Java.util.Random class. Every time a key is inserted for the first time in the queue we record its start time in a log table indexed 0..99. Once all the keys have been inserted into the queue then we begin removing them one by one. 
 
